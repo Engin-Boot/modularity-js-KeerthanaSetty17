@@ -1,4 +1,5 @@
 const expect = require('chai').expect;
+var toStringRef = require("./mapping");
 
 const MajorColors = [
     "white",
@@ -61,12 +62,8 @@ testNumberToPair(25, "violet", "slate");
 testColorToNumber("black", "brown", 14);
 testColorToNumber("yellow", "green", 18);
 
-function toString(){
-  console.log("\n25 pair color code:");
-  for(var key in MajorColors){
-      for(var key1 in MinorColors){
-          console.log(GetPairNumberFromColors(MajorColors[key],MinorColors[key1])+":"+MajorColors[key]+MinorColors[key1]);
-      }
-    }
-  }
-toString();
+toStringRef();
+
+module.exports= GetPairNumberFromColors;
+module.exports= MajorColors;
+module.exports= MinorColors;
