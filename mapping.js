@@ -1,5 +1,5 @@
-var indexIn= require("./index");
-let { GetPairNumberFromColorsRef , MajorColorsRef , MinorColorsRef } = indexIn;
+const indexIn= require("./index");
+let { GetPairNumberFromColorsRef , GetColorFromPairNumber , MajorColorsRef , MinorColorsRef } = indexIn;
 
 function toString(){
 var code;
