@@ -10,5 +10,5 @@ for(let key in indexIn.MajorColors){
     }
   }
 }
-
+//toString();
 module.exports= {toString};

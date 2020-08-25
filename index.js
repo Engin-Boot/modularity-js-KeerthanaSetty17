@@ -1,5 +1,3 @@
-const toStringRef = require("./mapping");
-
 const MajorColors = [
     "white",
     "red",
@@ -41,5 +39,7 @@ function GetPairNumberFromColors(majorColor, minorColor) {
     }
     return majorIndex * MinorColors.length + minorIndex + 1;
 }
+
 module.exports= {GetPairNumberFromColors, GetColorFromPairNumber, MajorColors, MinorColors};
+const toStringRef = require("./mapping");
 toStringRef.toString();
