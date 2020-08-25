@@ -1,17 +1,15 @@
 const expect = require('chai').expect;
 const indexInput= require("./index");
-let { GetPairNumberFromColorsRef , GetColorFromPairNumberRef ,MajorColorsRef , MinorColorsRef } = indexInput;
-
 
 function testNumberToPair(number, expectedMajor, expectedMinor) {
-  const pairOfColors = GetColorFromPairNumberRef(number);
+  const pairOfColors = indexInput.GetColorFromPairNumber(number);
   console.log(`${number} = ${expectedMajor} ${expectedMinor}`);
   expect(pairOfColors.major).equals(expectedMajor);
   expect(pairOfColors.minor).equals(expectedMinor);
 }
 
 function testColorToNumber(majorColor, minorColor, expectedNumber) {
-  const pairNumber = GetPairNumberFromColorsRef(majorColor, minorColor);
+  const pairNumber = indexInput.GetPairNumberFromColors(majorColor, minorColor);
   console.log(`${majorColor} ${minorColor} = ${pairNumber}`);
   expect(pairNumber).to.equal(expectedNumber);
 }
