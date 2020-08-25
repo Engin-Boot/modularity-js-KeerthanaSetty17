@@ -60,3 +60,15 @@ testNumberToPair(4, "white", "brown");
 testNumberToPair(25, "violet", "slate");
 testColorToNumber("black", "brown", 14);
 testColorToNumber("yellow", "green", 18);
+
+function toString(){
+  var code;
+  console.log("\n25 pair color code:");
+  for(var key in MajorColors){
+      for(var key1 in MinorColors){
+          code= GetPairNumberFromColors(MajorColors[key],MinorColors[key1]);
+          console.log(code+":"+MajorColors[key]+MinorColors[key1]);
+      }
+    }
+  }
+toString();
