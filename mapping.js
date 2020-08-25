@@ -1,17 +1,14 @@
 const indexIn= require("./index");
-let { GetPairNumberFromColorsRef , GetColorFromPairNumber , MajorColorsRef , MinorColorsRef } = indexIn;
 
 function toString(){
-var code;
+let code;
 console.log("25 pair color code:");
-for(var key in MajorColorsRef){
-  console.log("outer for in");
-    for(var key1 in MinorColorsRef){
-        code= GetPairNumberFromColorsRef(MajorColorsRef[key],MinorColorsRef[key1]);
-        console.log("inner for in");
-        console.log(code+":"+MajorColorsRef[key]+MinorColorsRef[key1]);
+for(let key in indexIn.MajorColors){
+     for(let key1 in indexIn.MinorColors){
+        code= indexIn.GetPairNumberFromColors(indexIn.MajorColors[key],indexIn.MinorColors[key1]);
+        console.log(code+":"+indexIn.MajorColors[key]+indexIn.MinorColors[key1]);
     }
   }
 }
 
-module.exports=toString;
+module.exports= {toString};

@@ -23,7 +23,7 @@ function GetColorFromPairNumber(pairNumber) {
         Math.floor(zeroBasedPairNumber / MinorColors.length);
     colorPair.major = MajorColors[majorColorIndex];
     colorPair.minor = MinorColors[zeroBasedPairNumber % MinorColors.length];
-    return colorPair
+    return colorPair;
 }
 
 function GetPairNumberFromColors(majorColor, minorColor) {
@@ -41,6 +41,5 @@ function GetPairNumberFromColors(majorColor, minorColor) {
     }
     return majorIndex * MinorColors.length + minorIndex + 1;
 }
-
-toStringRef();
 module.exports= {GetPairNumberFromColors, GetColorFromPairNumber, MajorColors, MinorColors};
+toStringRef.toString();
